@@ -1,0 +1,68 @@
+
+0.  PNG  : 24 bit,    16,777,216
+    JPEG : 24 bit,    16,777,216
+    GIF  :  8 bit,           256
+    BMP  : 32 bit, 4,294,967,296
+
+1.  GIF
+
+2.  Lossy compression throws away some of the data in a file. 
+	Lossless uses an algorithm to compress a file that is reversible, hence, 
+	the quality of the file can move back and forth between the two states.
+
+3.  JPEG
+
+4.  FAT stands for File Allocation Table; when a file is deleted, the 
+    information in the address table is erased, but the file itself 
+    remains on the hard drive.
+
+5.  Delete files using a secure delete option. That replaces the section
+    on disc with all zeroes or NUL.
+
+6.  stdint is a header file. This header defines a set of integral type 
+    aliases with specific width requirements, along with macros specifying 
+    their limits and macro functions to create values of these types.
+
+7.  Integer type with a width of exactly 8, 16, 32, or 64 bits.
+    For signed types, negative values are represented using 2's complement.
+    Ex. uint32_t is unsigned type and width is 32 bits.
+
+8.  BYTE is 1 byte
+	DWORD is 4 bytes
+	LONG is 4 bytes
+	WORD is 2 bytes
+
+9.  The first two bytes of a BMP is a WORD and denotes bfType, which specifies 
+    the file type. It must be set to the signature word BM (0x4D42) to indicate 
+    bitmap.
+
+10. bfSize specifies the size, in bytes, of the bitmap file.
+	biSize specifies the size of the structure in bytes.
+	
+11. If biHeight is positive, the bitmap is a bottom-up DIB and its origin is 
+    the lower left corner.
+	If biHeight is negative, the bitmap is a top-down DIB and its origin is 
+	the upper left corner.
+	
+12. The biBitCount member of the BITMAPINFOHEADER structure determines the 
+    number of bits that define each pixel and the maximum number of colors
+	in the bitmap.
+	
+13. fopen will return NULL if it cannot create the outfile to write to. 
+    Although it will not happen at all.
+
+14. I think it is because the program is reading in 1 RGB triple at a time. 
+    The header comments seem to confirm.
+
+15. biWidth is the width of the bitmap in pixels. If the width is 3, padding is
+    necessary since	the scanline must be a multiple of 4.
+	3 pixels * 3 bytes per pixel = 9 bytes. 3 bytes are added to bring the 
+	scanline to 12 bytes.
+
+16. Skips over any padding and looks for the next pixel (RGB triple)
+
+17. This is an integer constant which, when used as the whence argument to 
+    the fseek or fseeko function, specifies that the offset provided is 
+    relative to the current file position
+
+18. The image is still hazy. But not enough to hide our target, Jason.
